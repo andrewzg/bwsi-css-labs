@@ -36,14 +36,29 @@ def simple_calculator(operation: str, num1: float, num2: float) -> float:
             raise ValueError("Cannot divide by zero.")
     else:
         raise ValueError("Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'.")
+def is_float(value):
+    try:
+        float(value)
+        return True
+    except ValueError:
+        return False
 
 def main():
     
     print(f"===== Simple Calculator =====")
 
-    # Ask the user for sample input    
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
+    # Ask the user for sample input
+    imput1 = input("Enter the first number: ")
+    input2 = input("Enter the second number: ")    
+    if is_float(input1):
+        num1=float(input1)
+    else:
+        print("Please input a number again")
+    if is_float(input2):
+        num2=float(input2)
+    else:
+        print("Please input a number again")
+    
     operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
 
     # Perform the calculation and display the result
