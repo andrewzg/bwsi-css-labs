@@ -53,11 +53,11 @@ def main():
     if is_float(input1):
         num1=float(input1)
     else:
-        print("Please input a number again")
+        print("Please input an actual number again")
     if is_float(input2):
         num2=float(input2)
     else:
-        print("Please input a number again")
+        print("Please input an actual number again")
     
     operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
 
